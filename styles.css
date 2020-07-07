@@ -10,3 +10,14 @@ h1{
     font-size: 40px;
     text-align: center;
 }
+#twitter>i{
+    margin-left: 43px;
+}
+#twit{
+    width: 336px;
+    height: 39px;
+    margin-left: 100px;
+    margin-top: -40px;
+    font-family: "Audrey";
+    font-size: 34px;
+}
