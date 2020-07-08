@@ -57,14 +57,24 @@ h1{
 .ellipse{
     width: 524px;
     height: 441px;
-    margin-left: 380px;
+    margin-left: 400px;
     margin-top: -390px;
     border-radius: 50%;
     background-image: url("image/zedy.jpg");
     background-repeat: repeat-x;
     background-position: -25% 30%;
 }
-
+.nav{
+    width: 260px;
+    height: 322px;
+    margin-left: 950px;
+    margin-top: -500px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Audrey";
+    line-height: 112px;
+    font-size: 40px;
+}
 
 
 
