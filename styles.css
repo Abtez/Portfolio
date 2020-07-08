@@ -21,6 +21,9 @@ h1{
     font-family: "Audrey";
     font-size: 34px;
 }
+#twit>a:hover{
+    color: #9b7373;
+}
 #linkedin>i{
     margin-left: 43px;
 }
@@ -31,6 +34,9 @@ h1{
     margin-top: -40px;
     font-family: "Audrey";
     font-size: 34px;
+}
+#lin>a:hover{
+    color: #9b7373;
 }
 #facebook>i{
     margin-left: 43px;
@@ -43,6 +49,9 @@ h1{
     font-family: "Audrey";
     font-size: 34px;
 }
+#fb>a:hover{
+    color: #9b7373;
+}
 #git>i{
     margin-left: 43px;
 }
@@ -53,6 +62,9 @@ h1{
     margin-top: -40px;
     font-family: "Audrey";
     font-size: 34px;
+}
+#gt>a:hover{
+    color: #9b7373;
 }
 .ellipse{
     width: 524px;
@@ -75,12 +87,14 @@ h1{
     line-height: 112px;
     font-size: 40px;
 }
-
-
-
-
-
-
-
-
+.nav>a:hover{
+    color: #00F9BD;
 }
+
+
+
+
+
+
+
+
