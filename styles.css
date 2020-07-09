@@ -90,8 +90,29 @@ h1{
 .nav>a:hover{
     color: #00F9BD;
 }
-
-
+#contacts{
+    background-color: inherit;
+    margin-top: -35px;
+    margin-left: 8px;
+    overflow: hidden;
+    font-size: 20px; 
+    font-weight: bold;   
+}
+#contacts:hover{
+    color: #9b8b30;
+    background-color: dodgerblue;
+}
+#conts{
+    margin-left: 50px;
+    margin-top: -70px;
+    font-weight: bold;
+}
+.select{
+    background-color: dodgerblue;
+}
+.contact>option{
+    background-color: dodgerblue;
+}
 
 
 
