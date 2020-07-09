@@ -3,3 +3,10 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+h1{
+    width: 305px;
+    height: 47px;
+    margin-left: 390px;
+    font-family: "Architects Daughter";
+    text-decoration: underline;
+}
