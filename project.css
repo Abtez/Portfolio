@@ -1,0 +1,6 @@
+body{
+    background: linear-gradient(180deg, #242424 40.1%,  #1B5849 100%);
+    background-attachment: fixed;
+    height: 100%;
+    color: white;
+}
