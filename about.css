@@ -19,8 +19,11 @@ h1{
     display: inline;
     justify-content: space-evenly;
     font-size: 22px;
-
-    
-    
-
+}
+.boxone{
+    border: 1px solid green;
+    width: 604px;
+    float: right;
+    margin-top: 15px;
+    background: rgba(94, 210, 210, 0.2);
 }
