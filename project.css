@@ -4,3 +4,20 @@ body{
     height: 100%;
     color: white;
 }
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: "Audrey";
+}
+.nav{
+    margin-top: -30px;
+    font-family: "Audrey";
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.nav>a{
+    color: white;
+}
