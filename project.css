@@ -12,6 +12,9 @@ h1 {
     font-family: "Audrey";
 }
 
+h2{
+    text-decoration: underline;
+}
 .nav {
     margin-top: -30px;
     font-family: "Audrey";
@@ -62,4 +65,12 @@ h1 {
 }
 .taskwo>p>a:hover{
     color: yellow;
+}
+
+#goup{
+    margin-top: -30px;
+}
+
+#up{
+    padding-bottom: 20px;
 }
