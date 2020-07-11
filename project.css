@@ -48,3 +48,18 @@ h1 {
     color: yellow;
 }
 
+.taskwo{
+    margin-left: 100px;
+}
+.taskwo>img{
+    width: 485px;
+    height: 250px;
+}
+.taskwo{
+    width: 1000px;
+    height: 42px;
+    font-size: 18px;
+}
+.taskwo>p>a:hover{
+    color: yellow;
+}
