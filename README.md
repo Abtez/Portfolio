@@ -16,5 +16,5 @@ This project is aimed to show my educational background, work experience, skills
 
 [Click here to access My Portfolio.](https://github.com/Abzed/Portfolio)
 
-## Licence
+## License
 [MIT Licence Information](https://github.com/Abzed/Portfolio/commit/30713ea92762580fb2687d98ef06ecdc926ec03b)
