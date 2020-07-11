@@ -54,3 +54,8 @@ h3{
     letter-spacing: 0.12em;
     line-height: 25px;
 }
+#rights{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
