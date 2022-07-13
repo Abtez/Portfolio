@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    font-family: 'Manjari', sans-serif;
+}
+
+.sidebar {
+    width: 85px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.06);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.main-menu {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item {
+    list-style: none;
+    position: relative;
+    width: 85px;
+    height: 65px;
+}
+
+.menu-txt {
+    opacity: 0;
+    width: 0px;
+    min-width: 0px;
+    overflow: hidden;
+    transition: 300ms linear;
+    transition-delay: 250ms;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-a {
+    padding: 35px 33.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+    position: relative;
+    z-index: 100;
+    transition: 400ms;
+}
+
+.menu-item:hover .menu-txt {
+    opacity: 1;
+    width: 100%;
+    min-width: 40px;
+    padding: 0px 20px;
+    transition-delay: 0s;
+    color: #4c4c4c;
+}
+
+.menu-txt-hld {
+    position: absolute;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 38px;
+    font-size: .94rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+    padding: 9.5px 8px;
+    transition: 250ms linear;
+    display: flex;
+    align-items: center;
+    left: 20px;
+    transition-delay: 300ms;
+}
+
+.menu-item:hover .menu-txt-hld {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.07);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition-delay: 0ms;
+}
+.active .menu-icon {
+    color: #03A9F4;
+}
+
+
+/* Loading Message CSS */
+
+.end1, .middle1, .middle2{
+    display: inline-block;
+    overflow:hidden;
+    height: 1.5em;
+}
+.end2{
+    position:absolute;
+    color:#ff6a00
+}
+.middle1, .middle2{
+    color: #cfcfcf
+}
+.middle1 {
+    animation: ani1 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+.middle2 {
+    animation: ani2 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+
+@keyframes ani1 {
+    0% {
+    max-width: 500px;
+  }
+  
+  25% {
+    max-width: 0;
+  }
+  
+  75% {
+    max-width: 0;
+  }
+  
+  90% {
+    max-width: 500px;
+  }
+  
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+    0% {
+        max-width: 0;
+    }
+
+    25% {
+        max-width: 0;
+    }
+
+    50% {
+        max-width: 500px;
+    }
+
+    75% {
+        max-width: 0;
+    }
+
+    100% {
+        max-width: 0;
+    }
+}
