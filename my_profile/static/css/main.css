@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap');
+
+/* Side Navbar */
+
+.sidebar {
+    width: 85px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.06);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.main-menu {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item {
+    list-style: none;
+    position: relative;
+    width: 85px;
+    height: 65px;
+}
+
+.menu-txt {
+    opacity: 0;
+    width: 0px;
+    min-width: 0px;
+    overflow: hidden;
+    transition: 300ms linear;
+    transition-delay: 250ms;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-a {
+    padding: 35px 33.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+    position: relative;
+    z-index: 100;
+    transition: 400ms;
+}
+
+.menu-txt-hld > img{
+    margin-left: -5px;
+    object-fit: cover;
+    
+}
+
+.menu-item:hover .menu-txt {
+    opacity: 1;
+    width: 100%;
+    min-width: 40px;
+    padding: 0px 20px;
+    transition-delay: 0s;
+    color: #ff6a00;
+}
+
+.menu-txt-hld {
+    position: absolute;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 38px;
+    font-size: .94rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
+    padding: 9.5px 8px;
+    transition: 250ms linear;
+    display: flex;
+    align-items: center;
+    left: 20px;
+    transition-delay: 300ms;
+}
+
+.menu-item:hover .menu-txt-hld {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.07);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition-delay: 0ms;
+}
+.active .menu-icon {
+    color: #03A9F4;
+}
+
+
+/* Loading Message CSS */
+
+
+.end1, .middle1, .middle2{
+    display: inline-block;
+    overflow:hidden;
+    height: 1.5em;
+    font-size: 40px;
+}
+.end2{
+    position:absolute;
+    color:#ff6a00;
+    font-size: 40px;
+}
+.middle1, .middle2{
+    color: #999;
+}
+.middle1 {
+    animation: ani1 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+.middle2 {
+    animation: ani2 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+
+@keyframes ani1 {
+    0% {
+    max-width: 500px;
+  }
+  
+  25% {
+    max-width: 0;
+  }
+  
+  75% {
+    max-width: 0;
+  }
+  
+  90% {
+    max-width: 500px;
+  }
+  
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+    0% {
+        max-width: 0;
+    }
+
+    25% {
+        max-width: 0;
+    }
+
+    50% {
+        max-width: 500px;
+    }
+
+    75% {
+        max-width: 0;
+    }
+
+    100% {
+        max-width: 0;
+    }
+}
+
+/* Index.html Styles */
+
+.intro-name{
+    font-size: 48px;
+    font-weight: bold;
+    /* margin-top: 5%;
+    margin-left: 3%; */
+}
+
+.first-name{
+    color: #ff6a00;
+}
+
+/* Background Image Slideshow */
+
+.crossfade > figure {
+    animation: imageAnimation 30s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+  }
+
+.crossfade > figure:nth-child(1) { background-image: url('../image/film.jpg'); }
+.crossfade > figure:nth-child(2) {
+  animation-delay: 3s;
+  background-image: url('../image/burn.jpg');
+}
+.crossfade > figure:nth-child(3) {
+  animation-delay: 6s;
+  background-image: url('../image/vivid.jpg');
+}
+.crossfade > figure:nth-child(4) {
+  animation-delay: 9s;
+  background-image: url('../image/punch.jpg');
+}
+
+
+@keyframes 
+imageAnimation {  0% {
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 8% {
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 17% {
+ opacity: 1
+}
+ 25% {
+ opacity: 0
+}
+ 100% {
+ opacity: 0
+}
+}
+
+
+/* Hobby Words */
+
+#container {
+    color:#999;
+    font-size:20px;
+    font-weight:bold;
+    display:block;
+  }
+  
+  #flip {
+    height:40px;
+    overflow:hidden;
+    text-transform: uppercase;
+  }
+  
+  #flip > div > div {
+    font-size: 17px;
+    color:#fff;
+    padding: 2px;
+    height:8px;
+    margin-bottom: 8px;
+    display:inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 7s linear infinite;
+  }
+  
+  #flip div div {
+    color:#ff6a00;
+  }
+  #flip div:nth-child(2) div {
+    color:#03A9F4;
+  }
+
+  #flip div:nth-child(3) div {
+    color:black;
+  }
+
+  #flip div:last-child div {
+    color:#DC143C;
+  }
+  
+  @keyframes show {
+    0% {margin-top:-270px;}
+    10% {margin-top:-230px;}
+    20% {margin-top:-190px;}
+    30% {margin-top:-160px;}
+    40% {margin-top:-110px;}
+    50% {margin-top:-80px;}
+    60% {margin-top:-50px;}
+    80% {margin-top:0px;}
+    100% {margin-top:0px;}
+    /* 80% {margin-top:0px;}
+    80% {margin-top:0px;}
+    80% {margin-top:0px;}
+    100% {margin-top:-270px;} */
+  }
+
+  /* Social Icons */
+
+  .social-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .btn {
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    background: #d6d6d6;
+    box-shadow: 5px 5px 10px #b6a9a9, -5px -5px 10px #ffffff;
+    border-radius: 50%;
+    transition: 0.2;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.21);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

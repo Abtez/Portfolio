@@ -1,87 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="about.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Architects+Daughter" />
-    <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-    <h1><strong>A Little About Me...</strong></h1>
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">  
+{% endblock  %}
 
-    <div class="nav">
-        <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-        <a href="about.html"><i class="fa fa-fw fa-user"></i>About Me</a>
-        <a href="project.html"><i class="fa fa-fw fa-folder"></i>Projects</a>
-        
-</div>
+{% block content %}
 
-<div class="boxone">
-    <div class="content">
-        <h3>Job Experience</h3>
-        <ul>
-            <li>2019: Hamad International Airport- Janitor</li>
-            <li>2017-2018: Dido Entz Cyber Cafe- Attendant</li>
-            <li>2016: Al makai Youth Group- Youth Group Projects</li>
-        </ul>
-        <h3>Educational Background</h3>
-        <ul>
-            <li>2020: Moringa School</li>
-            <li>2020: Digital Divide Data</li>
-            <li>2018: SamaSource</li>
-            <li>2011-2014: Nairobi Milimani Sec. School</li>
-        </ul>
-        <h3>Hobbies And Interests</h3>
-        <ol>
-            <li>Web Reseaching</li>
-            <li>Swimming</li>
-            <li>Gamming</li>
-            <li>Coding</li>
-        </ol>
-        <h3>Location</h3>
-        <p><span style="margin-left: 30px;"><em>Nairobi, Kenya</em></p></span>
-        <h3>Contacts</h3>
-        <ul id="conts">
-             <li>ibraabzed@gmail.com</li>
-             <li>ibraabzed@yahoo.com</li>
-             <li>+254759507042</li>
-        </ul>
-        <hr id="line" color="black">
-        <div class="icons">
-            <a href="https://facebook.com/abzed.tetz" target="_blank"><i class="fa fa-facebook-official" style="font-size: 50px;color: black;"></i></a>
-            <a href="https://twitter.com/AbzedMohammed" target="_blank"><i class="fa fa-twitter" style="font-size: 50px;color: black;"></i></a>
-            <a href="https://www.linkedin.com/in/abzed-mohammed-630bb181/" target="_blank"><i class="fa fa-linkedin" style="font-size: 50px;color: black;"></i></a>
-            <a href="https://github.com/Abzed" target="_blank"><i class="fa fa-github" style="font-size: 50px;color: black;"></i></a>
-        </div>
-    </div>
-</div>
-    
-<div class="boxtwo">
-    <div class="contentwo">
-        <h3>Skills</h3>
-        <ol id="skill">
-            <li>Teamwork oriented and organisation</li>
-            <li>Critical thinker and problem solver</li>
-            <li>Excellent time management skills</li>
-            <li>Flexibility and adaptability</li>
-            <li>Emotional Intelligence</li>
-            <li>Digital literacy</li>
-            <li>Creativity</li>
-        </ol>
-        <h3>WHY Programming...?</h3>
-        <p id="story">My interest in Computer Science began a long time as a kid. 
-            I loved the way the Graphical User Interface was created how
-             each and every applicaton had its unique function. I was intrigued,
-              and as I grew up I wanted to know the science behind everything i 
-              could not explain back then. Now I have the opportunity to learn,
-               understand, create web pages and applications. Am looking forward
-                to adding value to the society.</p>
-    </div>
-</div>
-<p id="rights">Copyright (c) 2020 Abzed Abdul Mohammed</p>
-</body>
-</html>
+    Hello I'm Tetman
+  
+{% endblock content %}

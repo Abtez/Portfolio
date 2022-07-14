@@ -1,5 +1,31 @@
 from django.shortcuts import render
 
-def home(requests):
+def home(request):
     title = 'Home'
-    return render(requests, 'index.html', {'title': title})
+    return render(request, 'index.html', {'title': title})
+
+def social(request):
+    title = 'Social Platform'
+    return render(request, 'social.html', {'title': title})
+
+def profile(request):
+    title = "Abzed's Profile"
+    return render(request, 'about.html', {'title': title})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
