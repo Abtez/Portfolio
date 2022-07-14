@@ -24,7 +24,7 @@
     <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="slideshow">
     
         <div class="row">
             
@@ -46,11 +46,58 @@
         </div>
     
    
-<script src="{% static 'js/index.js' %}"></script>
-<!-- MDB -->
+
+    <!-- MDB -->
     <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
     ></script>
+
+    <script>
+        var i = 0;
+        var images = [];
+        var slideTime = 3000; // 3 seconds
+        
+        images[0] = 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp';
+        images[1] = 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp';
+        
+        function changePicture() {            
+            document.body.style.backgroundImage = "url(" + images[i] + ")";
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+        }
+
+        function imageTimer(){
+            setTimeout(changePicture, slideTime);
+        }
+
+        $(function() {
+            // set `$.fx.interval` at `0`
+            $.fx.interval = 0;
+            (function cycleBgImage(elem, bgimg) {
+          // `elem`:`#slideshow`
+          // set, reset, delay to `1000` after background image reset
+          elem.css("backgroundImage", bgimg)
+            // fade in background image
+            .fadeTo(3000, 1, "linear", function() {
+              // set `delay` before fadeing out image
+              // fade in background image        
+              $(this).delay(3000, "fx").fadeTo(3000, 0, "linear", function() {
+                // split background image string at comma , creating array
+                var img = $(this).css("backgroundImage").split(","),
+                  // concat first background image to `img` array,
+                  // remove first background image from `img` array
+                  bgimg = img.concat(img[0]).splice(1).join(",");
+                // recursively call `cycleBgImage`
+                cycleBgImage(elem, bgimg);
+              });
+            });
+            }($("body")));
+          });
+        
+    </script>
 </body>
 </html>
