@@ -1,64 +1,74 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Font Awesome -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
-    rel="stylesheet"
-    />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio {% if title %} - {{ title }} {% endif %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <!-- <div class="crossfade">
-      <figure></figure>
-      <figure></figure>
-      <figure></figure>
-      <figure></figure>
-    </div> -->
-    
-        <div class="row">
-            
-            <div class="col-md-1 mt-5">
-               {% include "sidenav.html" %}
-            </div>
-
-           
-            <div class="col-md-7 mt-5">
-             {% block content %}
-               
-             {% endblock content %}
-            </div>
-            
-            <div class="col-md-1 mt-5"></div>
-                
-            <div class="col-md-3 mt-5">
-                {% include 'social.html' %}
-            </div>
-        </div>
-    
-   
-
-    <!-- MDB -->
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
-    ></script>
-
-</body>
-</html>
+<div class="recent hidden-xs">
+    <p class="recent-post">Recent Posts</p>
+    <ul class="recent-ul">
+      <li><a href=""><i class="fa fa-angle-right"></i> 11 Random Things at Puerto Princesa, Palawan</a></li>
+      <li><a href=""><i class="fa fa-angle-right"></i> 3D2N DIY Itenerary and Budget at Puerto Princesa, Palawan (7 pax)</a></li>
+      <li><a href=""><i class="fa fa-angle-right"></i> Dining at Blue Palawan</a></li>
+      <li><a href=""><i class="fa fa-angle-right"></i> WOW moment at the Underground River in Sabang, Palawan</a></li>
+      <li><a href=""><i class="fa fa-angle-right"></i> Worth the Price: Sabang x Zipline in Sabang, Palawan</a></li>
+      <li><a href=""><i class="fa fa-angle-right"></i> Dont Forget The Mangrove Paddleboat Tour In Sabang, Palawan</a>
+      </li>
+    </ul>  
+  </div>
+</div>
+<div class="col-xs-12 col-sm-8 pad posts">
+  <!--1 post-->
+  <div class="post-post">
+  <div class="post-info">
+    <div class="col-xs-3 col-sm-2">
+      <img src="https://avatars0.githubusercontent.com/u/8916384?s=200&v=4" alt="" class="img-responsive img-rounded default-img" />
+    </div>
+    <div class="col-xs-9 col-sm-10">
+      <br/>
+      <p class="post-date"><a href="">October 15, 2015</a> | <a href="">Travel Stories</a></p>
+      <p class="post-title">11 Random Things About Puerto Princesa, Palawan</p>
+    </div>
+  </div>
+  <div class="post-default">
+    <img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=600&q=80" alt="" class="img-responsive img-rounded post-img" />
+    <p class="post-sm"><a href=""><i class="fa fa-pencil-square-o"></i> Write a comment </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href=""><i class="fa fa-tag"></i> palawan, puerto princesa, travel, sabang</a></p>
+  </div>
+  </div>
+  
+  <!--2post-->
+  <div class="post-post">
+  <div class="post-info">
+    <div class="col-xs-3 col-sm-2">
+      <img src="https://avatars0.githubusercontent.com/u/8916384?s=200&v=4" alt="" class="img-responsive img-rounded default-img" />
+    </div>
+    <div class="col-xs-9 col-sm-10">
+      <br/>
+      <p class="post-date"><a href="">October 15, 2015</a> | <a href="">Travel Stories</a></p>
+      <p class="post-title">3D2N Puerto Princesa, Palawan DIY Itenerary and Budget (7pax)</p>
+    </div>
+  </div>
+  <div class="post-default">
+    <img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=600&q=80" alt="" class="img-responsive img-rounded post-img" />
+    <p class="post-sm"><a href=""><i class="fa fa-pencil-square-o"></i> Write a comment </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href=""><i class="fa fa-tag"></i> palawan, puerto princesa, travel, sabang</a></p>
+  </div>
+  </div>
+  <!--2post-->
+  <div class="post-post">
+  <div class="post-info">
+    <div class="col-xs-3 col-sm-2">
+      <img src="https://avatars0.githubusercontent.com/u/8916384?s=200&v=4" alt="" class="img-responsive img-rounded default-img" />
+    </div>
+    <div class="col-xs-9 col-sm-10">
+      <br/>
+      <p class="post-date"><a href="">October 15, 2015</a> | <a href="">Travel Stories</a></p>
+      <p class="post-title">Dinner at Blue Palawan in Puerto Princesa</p>
+    </div>
+  </div>
+  <div class="post-default">
+    <img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?auto=format&fit=crop&w=600&q=80" alt="" class="img-responsive img-rounded post-img" />
+    <p class="post-sm"><a href=""><i class="fa fa-pencil-square-o"></i> Write a comment </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href=""><i class="fa fa-tag"></i> palawan, puerto princesa, travel, blue palawan</a></p>
+  </div>
+  </div>
+ <!--end of all posts--> 
+</div>
