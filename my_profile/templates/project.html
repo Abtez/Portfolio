@@ -1,44 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% load cloudinary %}
+{% block content %}
 
-<head>
-    <link rel="stylesheet" type="text/css" href="project.css">
-    <link href="//db.onlinewebfonts.com/c/d9a58a393d946d86051fbd9a0b594d2f?family=Audrey" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-</head>
+    <div class="mb-5">
 
-<body>
-    <h1>PROJECTS</h1>
+    <!-- Pills navs -->
+    <ul class="nav nav-pills nav-fill mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+        <a
+            class="nav-link active"
+            id="all"
+            data-mdb-toggle="pill"
+            href="#all-languages"
+            role="tab"
+            aria-controls="all"
+            aria-selected="true"
+            >All</a
+        >
+        </li>
 
-    <div class="nav">
-        <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-        <a href="about.html"><i class="fa fa-fw fa-user"></i>About Me</a>
-        <a href="project.html"><i class="fa fa-fw fa-folder"></i>Projects</a>
+        <li class="nav-item" role="presentation">
+        <a
+            class="nav-link"
+            id="vanilla-js"
+            data-mdb-toggle="pill"
+            href="#vanilla"
+            role="tab"
+            aria-controls="vanilla-js"
+            aria-selected="false"
+            >Vanilla JS</a
+        >
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a
+                class="nav-link"
+                id="django"
+                data-mdb-toggle="pill"
+                href="#py-django"
+                role="tab"
+                aria-controls="django"
+                aria-selected="false"
+                >Django</a
+            >
+        </li>
+
+        <li class="nav-item" role="presentation">
+        <a
+            class="nav-link"
+            id="flask"
+            data-mdb-toggle="pill"
+            href="#py-flask"
+            role="tab"
+            aria-controls="flask"
+            aria-selected="false"
+            >Flask</a
+        >
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a
+                class="nav-link"
+                id="react"
+                data-mdb-toggle="pill"
+                href="#reactjs"
+                role="tab"
+                aria-controls="react"
+                aria-selected="false"
+                >React</a
+            >
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a
+                class="nav-link"
+                id="rails"
+                data-mdb-toggle="pill"
+                href="#angularjs"
+                role="tab"
+                aria-controls="angular"
+                aria-selected="false"
+                >Angular</a
+            >
+        </li>
+
+    </ul>
+    <!-- Pills navs -->
+
+    <!-- Pills content -->
+    <div class="tab-content" id="ex2-content">
+
+        <div
+        class="tab-pane fade show active"
+        id="all-languages"
+        role="tabpanel"
+        aria-labelledby="all"
+        >
+
+        {% for project in projects %}
+            <a href="{% url 'single_project' project.title %}">
+                <div class="card mt-3">
+                    <div class="img-box">
+                    <img src="{{project.picture.url}}" alt="">
+                    </div>
+                    <div class="content">
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <div class="card-action">
+                        <div class="name-container">
+                        <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                        <div class="name-box">
+                            <span>Abzed Mohammed</span>
+                            <small>Jun 16, 2022</small>
+                        </div>
+                        </div>
+
+                            {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                            {% endfor %}
+                        
+                    </div>
+                    </div>
+                </div>
+            </a>
+      
+    {% endfor %}
+
+        </div>
+
+        <div
+        class="tab-pane fade"
+        id="vanilla"
+        role="tabpanel"
+        aria-labelledby="vanilla-js"
+        >
+        Javascript
+        </div>
+        
+        <div
+        class="tab-pane fade"
+        id="py-django"
+        role="tabpanel"
+        aria-labelledby="django"
+        >
+
+        {% for project in projects %}
+        {% for tag in project.language.all %}
+           
+            
+            {% if 'django' in tag.name or 'Django' in tag.name %}
+                <a href="{% url 'single_project' project.title %}">
+                    <div class="card mt-3">
+                        <div class="img-box">
+                        <img src="{{project.picture.url}}" alt="">
+                        </div>
+                        <div class="content">
+                        <h3>{{project.title}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="card-action">
+                            <div class="name-container">
+                            <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                            <div class="name-box">
+                                <span>Abzed Mohammed</span>
+                                <small>Jun 16, 2022</small>
+                            </div>
+                            </div>
+
+                            {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                            {% endfor %}
+                            
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+                
+      
+        {% endfor %}
+        {% endfor %}
+
+        </div>
+
+        <div
+        class="tab-pane fade show"
+        id="py-flask"
+        role="tabpanel"
+        aria-labelledby="flask"
+        >
+
+        {% for project in projects %}
+        {% for tag in project.language.all %}
+
+        
+        {% if 'flask' in tag.name or 'Flask' in tag.name %}
+            <a href="{% url 'single_project' project.title %}">
+                <div class="card mt-3">
+                    <div class="img-box">
+                    <img src="{{project.picture.url}}" alt="">
+                    </div>
+                    <div class="content">
+                    <h3>{{project.title}}</h3>
+                    <p>{{project.description}}</p>
+                    <div class="card-action">
+                        <div class="name-container">
+                        <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                        <div class="name-box">
+                            <span>Abzed Mohammed</span>
+                            <small>Jun 16, 2022</small>
+                        </div>
+                        </div>
+
+                        {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                        {% endfor %}
+
+                    </div>
+                    </div>
+                </div>
+            </a>
+            
+        {% endif %}
+            
+          
+        {% endfor %}
+          
+        {% endfor %}
+        </div>
+
+        <div
+        class="tab-pane fade show"
+        id="reactjs"
+        role="tabpanel"
+        aria-labelledby="react"
+        >
+        
+        {% for project in projects %}
+        {% for tag in project.language.all %}
+           
+            
+            {% if 'react' in tag.name or 'React' in tag.name %}
+                <a href="{% url 'single_project' project.title %}">
+                    <div class="card mt-3">
+                        <div class="img-box">
+                        <img src="{{project.picture.url}}" alt="">
+                        </div>
+                        <div class="content">
+                        <h3>{{project.title}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="card-action">
+                            <div class="name-container">
+                            <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                            <div class="name-box">
+                                <span>Abzed Mohammed</span>
+                                <small>Jun 16, 2022</small>
+                            </div>
+                            </div>
+
+                            {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                            {% endfor %}
+                            
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+                
+      
+        {% endfor %}
+        {% endfor %}
+
+        </div>
+
+        <div
+        class="tab-pane fade show"
+        id="angularjs"
+        role="tabpanel"
+        aria-labelledby="angular"
+        >
+        
+        {% for project in projects %}
+        {% for tag in project.language.all %}
+           
+            
+            {% if 'Angular' in tag.name or 'angular' in tag.name %}
+                <a href="{% url 'single_project' project.title %}">
+                    <div class="card mt-3">
+                        <div class="img-box">
+                        <img src="{{project.picture.url}}" alt="">
+                        </div>
+                        <div class="content">
+                        <h3>{{project.title}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="card-action">
+                            <div class="name-container">
+                            <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                            <div class="name-box">
+                                <span>Abzed Mohammed</span>
+                                <small>Jun 16, 2022</small>
+                            </div>
+                            </div>
+
+                            {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                            {% endfor %}
+                            
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+                
+      
+        {% endfor %}
+        {% endfor %}
+
+        </div>
     </div>
 
-    <div class="taskone">
-        <h2>Independent Project</h2>
-        <img src="image/projectone.jpg" alt="project one screenshot">
-        <p id="upper">My first website was about the benefits of the most
-             common fruits. This project was accomplished by using Cascading
-              Style Sheet (CSS) and Hyper Text Markup Langauge (HTML). 
-              Use the link below to access the full page.</p>
-        <p id="up"><a href="https://abzed.github.io/ProjectOne/" target="_blank"><span style="color: white;"> Https://abzed.github.io/ProjectOne/</span></a></p>
-    </div>
+</div>
 
-    <div class="taskwo">
-        <h2 id="goup">Group Project</h2>
-        <img src="image/signIn.jpg">
-        <img src="image/Screenshot from 2020-07-07 15-52-44.jpg">
-        <p>This project was about showcasing technological improvements in 
-            the automobile industry. The programming language used to achieve 
-            this project was JavaScript and the structure was edited using
-             HTML, CSS and Bootstrap. Click on the given link to access the project.</p>
-             <p id="up"><a href="https://ken-muigai.github.io/Tesla/" target="_blank"><span style="color: white;">https://ken-muigai.github.io/Tesla/</span></a></p>
-    </div>
-    <p id="rights">Copyright (c) 2020 Abzed Abdul Mohammed</p>
-</body>
-</html>
+{% endblock content %}
