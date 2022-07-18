@@ -676,7 +676,18 @@ imageAnimation {  0% {
   width: fit-content;
 }
 
+/* Coming Soon */
 
+.coming-soon{
+  position: absolute;
+  align-items: center;
+  margin: auto;
+  top: 35%;
+  left: 35%;
+  border: 5px solid white;
+  background-color: #777;
+  padding: 15px;
+}
 
 
 

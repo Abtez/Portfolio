@@ -29,7 +29,7 @@
             role="tab"
             aria-controls="vanilla-js"
             aria-selected="false"
-            >Vanilla JS</a
+            >Javascript</a
         >
         </li>
 
@@ -112,7 +112,7 @@
                         <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
                         <div class="name-box">
                             <span>Abzed Mohammed</span>
-                            <small>Jun 16, 2022</small>
+                            <!-- <small>Jun 16, 2022</small> -->
                         </div>
                         </div>
 
@@ -137,7 +137,42 @@
         role="tabpanel"
         aria-labelledby="vanilla-js"
         >
-        Javascript
+        {% for project in projects %}
+        {% for tag in project.language.all %}
+           
+            
+            {% if 'Javascript' in tag.name or 'javascript' in tag.name %}
+                <a href="{% url 'single_project' project.title %}">
+                    <div class="card mt-3">
+                        <div class="img-box">
+                        <img src="{{project.picture.url}}" alt="">
+                        </div>
+                        <div class="content">
+                        <h3>{{project.title}}</h3>
+                        <p>{{project.description}}</p>
+                        <div class="card-action">
+                            <div class="name-container">
+                            <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                            <div class="name-box">
+                                <span>Abzed Mohammed</span>
+                            </div>
+                            </div>
+
+                            {% for tag in project.language.all %}
+                            <ul>
+                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                            </ul>
+                            {% endfor %}
+                            
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+                
+      
+        {% endfor %}
+        {% endfor %}
         </div>
         
         <div
@@ -165,7 +200,7 @@
                             <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
                             <div class="name-box">
                                 <span>Abzed Mohammed</span>
-                                <small>Jun 16, 2022</small>
+                                <!-- <small>Jun 16, 2022</small> -->
                             </div>
                             </div>
 
@@ -212,7 +247,7 @@
                         <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
                         <div class="name-box">
                             <span>Abzed Mohammed</span>
-                            <small>Jun 16, 2022</small>
+                            <!-- <small>Jun 16, 2022</small> -->
                         </div>
                         </div>
 
@@ -260,7 +295,7 @@
                             <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
                             <div class="name-box">
                                 <span>Abzed Mohammed</span>
-                                <small>Jun 16, 2022</small>
+                                <!-- <small>Jun 16, 2022</small> -->
                             </div>
                             </div>
 
@@ -307,7 +342,7 @@
                             <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
                             <div class="name-box">
                                 <span>Abzed Mohammed</span>
-                                <small>Jun 16, 2022</small>
+                                <!-- <small>Jun 16, 2022</small> -->
                             </div>
                             </div>
 
