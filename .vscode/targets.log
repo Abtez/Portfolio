@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 16 14:07:59 2022
+# Make data base, printed on Mon Jul 18 18:20:59 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\Abzed
 # environment
 LOCALAPPDATA = C:\Users\Abzed\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Abzed\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\Users\Abzed\Documents\Django
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -37,7 +37,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_4228_LMNQVIJYIWLGYQHL
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19612_XPJBPFXFWUOZDVZN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 4228
+VSCODE_PID = 19612
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -154,8 +154,6 @@ USERDOMAIN = ABZED
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# environment
-__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := env
 # default
@@ -203,7 +201,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
 # variable set hash-table stats:
-# Load=95/1024=9%, Rehash=0, Collisions=9/122=7%
+# Load=94/1024=9%, Rehash=0, Collisions=9/121=7%
 
 # Pattern-specific Variable Values
 
@@ -381,6 +379,6 @@ hmigrate:
 # strcache performance: lookups = 60 / hit rate = 36%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Sat Jul 16 14:07:59 2022
+# Finished Make data base on Mon Jul 18 18:20:59 2022
 
  
