@@ -22,7 +22,7 @@ import cloudinary.api
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TAGGIT_CASE_INSENSITIVE = True
 # Quick-start development settings - unsuitable for production
@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',
+    # 'livereload',
     'django.contrib.staticfiles',
     'my_profile',
     'cloudinary',
@@ -79,7 +79,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'livereload.middleware.LiveReloadScript',
+    # 'livereload.middleware.LiveReloadScript',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
