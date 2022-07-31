@@ -38,13 +38,13 @@ hadmin:
 	heroku run python manage.py createsuperuser --username admin --email admin@admin.com
 
 hmake:
-	heroku run python manage.py makemigrations
+	heroku run python manage.py makemigrations my_profile
 
 hmigrate:
 	heroku run python manage.py migrate
 
 pushdb:
-	heroku pg:push api DATABASE_URL
+	heroku pg:push portfolio postgresql-reticulated-65024
 
 reset:
 	heroku pg:reset DATABASE

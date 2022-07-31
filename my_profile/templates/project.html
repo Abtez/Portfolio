@@ -100,7 +100,7 @@
 
         {% for project in projects %}
             <a href="{% url 'single_project' project.title %}">
-                <div class="card mt-3">
+                <div class="card project-card mt-3">
                     <div class="img-box">
                     <img src="{{project.picture.url}}" alt="">
                     </div>
@@ -143,7 +143,7 @@
             
             {% if 'Javascript' in tag.name or 'javascript' in tag.name %}
                 <a href="{% url 'single_project' project.title %}">
-                    <div class="card mt-3">
+                    <div class="card project-card mt-3">
                         <div class="img-box">
                         <img src="{{project.picture.url}}" alt="">
                         </div>
@@ -188,7 +188,7 @@
             
             {% if 'django' in tag.name or 'Django' in tag.name %}
                 <a href="{% url 'single_project' project.title %}">
-                    <div class="card mt-3">
+                    <div class="card project-card mt-3">
                         <div class="img-box">
                         <img src="{{project.picture.url}}" alt="">
                         </div>
@@ -235,7 +235,7 @@
         
         {% if 'flask' in tag.name or 'Flask' in tag.name %}
             <a href="{% url 'single_project' project.title %}">
-                <div class="card mt-3">
+                <div class="card project-card mt-3">
                     <div class="img-box">
                     <img src="{{project.picture.url}}" alt="">
                     </div>
@@ -283,7 +283,7 @@
             
             {% if 'react' in tag.name or 'React' in tag.name %}
                 <a href="{% url 'single_project' project.title %}">
-                    <div class="card mt-3">
+                    <div class="card project-card mt-3">
                         <div class="img-box">
                         <img src="{{project.picture.url}}" alt="">
                         </div>
@@ -330,7 +330,7 @@
             
             {% if 'Angular' in tag.name or 'angular' in tag.name %}
                 <a href="{% url 'single_project' project.title %}">
-                    <div class="card mt-3">
+                    <div class="card project-card mt-3">
                         <div class="img-box">
                         <img src="{{project.picture.url}}" alt="">
                         </div>

@@ -28,7 +28,6 @@ TAGGIT_CASE_INSENSITIVE = True
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-
 cloudinary.config(
     cloud_name = os.getenv('CLOUD_NAME'),
     api_key = os.getenv('CLOUD_API'),

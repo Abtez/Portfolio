@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 18 18:20:59 2022
+# Make data base, printed on Sun Jul 31 13:36:26 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ USERPROFILE = C:\Users\Abzed
 # environment
 LOCALAPPDATA = C:\Users\Abzed\AppData\Local
 # environment
-VSCODE_CWD = C:\Users\Abzed\Documents\Django
+VSCODE_CWD = C:\Users\Abzed\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -37,7 +37,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19612_XPJBPFXFWUOZDVZN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14196_BCHOOQNVOLNLGITP
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -51,7 +51,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Abzed\AppData\Roaming\Code\CachedData\b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = C:\Users\Abzed\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LANG = C
 # default
@@ -87,7 +87,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 19612
+VSCODE_PID = 14196
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -181,7 +181,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\Abzed\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\32a8ad09820179a6888d1b58cac1729c-1.69.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\32a8ad09820179a6888d1b58cac1729c-1.69.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -209,7 +209,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Abzed/Documents/Django/Portfolio, mtime 1657698457): 17 files, no impossibilities.
+# . (key c:/Users/Abzed/Documents/Django/Portfolio, mtime 1658171062): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
@@ -224,7 +224,7 @@ pushdb:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 47):
-	heroku pg:push api DATABASE_URL
+	heroku pg:push portfolio postgresql-reticulated-65024
 
 make:
 #  Implicit rule search has not been done.
@@ -243,7 +243,7 @@ live:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-13 11:41:07
+#  Last modified 2022-07-18 22:04:45
 #  File has been updated.
 #  Successfully updated.
 
@@ -356,7 +356,7 @@ hmake:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 41):
-	heroku run python manage.py makemigrations
+	heroku run python manage.py makemigrations my_profile
 
 hmigrate:
 #  Implicit rule search has not been done.
@@ -379,6 +379,6 @@ hmigrate:
 # strcache performance: lookups = 60 / hit rate = 36%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Mon Jul 18 18:20:59 2022
+# Finished Make data base on Sun Jul 31 13:36:26 2022
 
  
