@@ -6,9 +6,6 @@ def home(request):
     title = 'Home'
     return render(request, 'index.html', {'title': title})
 
-def social(request):
-    title = 'Social Platform'
-    return render(request, 'social_prescence.html', {'title': title})
 
 def profile(request):
     title = "Abzed's Profile"
@@ -27,10 +24,11 @@ def single_project(request, name):
     return render(request, 'single_project.html', {'title': title, 'projects' : project, 'images': images})
 
 def articles(request):
+    title = "Articles"
     url = 'https://dev.to/api/articles?username=abzed'
     res = requests.get(url)
     data = res.json()
-    return render(request, 'articles.html', {'data': data})
+    return render(request, 'articles.html', {'title': title, 'data': data})
 
 
 

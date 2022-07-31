@@ -48,6 +48,7 @@ ul > li{
     position: relative;
     width: 85px;
     height: 65px;
+    margin-top: 25%;
 }
 
 .menu-txt {
@@ -79,7 +80,6 @@ ul > li{
     font-size: 1.8rem;
     color: #000;
     position: relative;
-    /* z-index: 100; */
     transition: 400ms;
 }
 
