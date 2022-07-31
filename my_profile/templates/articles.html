@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for item in data %}
+    <a target="_blank" href="{{item.url}}">
+        <div class="card project-card mt-3">
+            <div class="img-box">
+            <img src="{{ item.social_image}}" alt="">
+            </div>
+            <div class="content">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+            <div class="card-action">
+                <div class="name-container">
+                <img src="{% static 'image/film.jpg' %}" class="avatar" alt="">
+                <div class="name-box">
+                    <span>Abzed Mohammed</span>
+                    <!-- <small>{{ item.published_at}}</small> -->
+                </div>
+                </div>
+
+                    {% for tags in item.tag_list %}
+                    <ul>
+                        <li class="tags btn-info mt-1">{{tags}}</li>
+                    </ul>
+                    {% endfor %}
+                
+            </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+{% endblock content %}

@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect, get_object_or_404
 from .models import *
+import requests
 
 def home(request):
     title = 'Home'
@@ -24,6 +25,12 @@ def single_project(request, name):
     project = get_object_or_404(Code, title=name)
     images = Image.objects.filter(projects=project)
     return render(request, 'single_project.html', {'title': title, 'projects' : project, 'images': images})
+
+def articles(request):
+    url = 'https://dev.to/api/articles?username=abzed'
+    res = requests.get(url)
+    data = res.json()
+    return render(request, 'articles.html', {'data': data})
 
 
 
