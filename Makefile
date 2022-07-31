@@ -44,7 +44,7 @@ hmigrate:
 	heroku run python manage.py migrate
 
 pushdb:
-	heroku pg:push portfolio postgresql-reticulated-65024
+	heroku pg:push portfolio DATABASE_URL
 
 reset:
 	heroku pg:reset DATABASE
