@@ -17,6 +17,13 @@ ul > li{
   list-style-type: none;
 }
 
+/* Main Nav */
+
+.main-avatar{
+  object-fit: contain;
+}
+
+
 /* Side Navbar */
 
 .sidebar {
@@ -333,10 +340,10 @@ imageAnimation {  0% {
 
   .social-container{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
-    text-align: left;
-    width: 300px;
+    /* text-align: left; */
+    width: 100%;
     height: auto;
   }
 

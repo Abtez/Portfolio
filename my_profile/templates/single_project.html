@@ -3,10 +3,26 @@
 {% load cloudinary %}
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid mb-5">
+  {% for project in projects %}
+  <h1 class="text-light">{{project.title}}</h1>
+  <p class="text-light">{{ project.description }}</p>
+  <!-- <button class="btn btn-outline-info btn-sm my-1">View Site</button> -->
+  <video width="auto" height="400" controls>
+    <source src="{{project.video}}" type="video/mp4">
+    <source src="{{project.video}}" type="video/ogg">
+  Your browser does not support the video tag.
+  </video>
+
   <div class="container">
-    <h1>Hello Abzeeeeeeeeeeed</h1>
-  </div>  
+    <div class="d-flex flex-row justify-content-between flex-wrap">
+      <img width="350" height="280" src="{{project.picture}}" alt="image1">
+      <img width="350" height="280" src="{{project.picture2}}" alt="image2">
+    </div>
+  </div>
+  
+{% endfor %}
+    
 </div>
 
 {% endblock %}

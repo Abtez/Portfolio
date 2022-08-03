@@ -102,7 +102,7 @@
             <a href="{% url 'single_project' project.title %}">
                 <div class="card project-card mt-3">
                     <div class="img-box">
-                    <img src="{{project.picture.url}}" alt="">
+                    <img src="{{project.picture}}" alt="">
                     </div>
                     <div class="content">
                     <h3>{{project.title}}</h3>
@@ -116,9 +116,9 @@
                         </div>
                         </div>
 
-                            {% for tag in project.language.all %}
+                            {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                             {% endfor %}
                         
@@ -138,14 +138,14 @@
         aria-labelledby="vanilla-js"
         >
         {% for project in projects %}
-        {% for tag in project.language.all %}
+        {% for tag in project.language %}
            
             
-            {% if 'Javascript' in tag.name or 'javascript' in tag.name %}
+            {% if 'Javascript' in tag or 'javascript' in tag %}
                 <a href="{% url 'single_project' project.title %}">
                     <div class="card project-card mt-3">
                         <div class="img-box">
-                        <img src="{{project.picture.url}}" alt="">
+                        <img src="{{project.picture}}" alt="">
                         </div>
                         <div class="content">
                         <h3>{{project.title}}</h3>
@@ -158,9 +158,9 @@
                             </div>
                             </div>
 
-                            {% for tag in project.language.all %}
+                            {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                             {% endfor %}
                             
@@ -183,14 +183,14 @@
         >
 
         {% for project in projects %}
-        {% for tag in project.language.all %}
+        {% for tag in project.language %}
            
             
-            {% if 'django' in tag.name or 'Django' in tag.name %}
+            {% if 'django' in tag or 'Django' in tag %}
                 <a href="{% url 'single_project' project.title %}">
                     <div class="card project-card mt-3">
                         <div class="img-box">
-                        <img src="{{project.picture.url}}" alt="">
+                        <img src="{{project.picture}}" alt="">
                         </div>
                         <div class="content">
                         <h3>{{project.title}}</h3>
@@ -204,9 +204,9 @@
                             </div>
                             </div>
 
-                            {% for tag in project.language.all %}
+                            {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                             {% endfor %}
                             
@@ -230,14 +230,14 @@
         >
 
         {% for project in projects %}
-        {% for tag in project.language.all %}
+        {% for tag in project.language %}
 
         
-        {% if 'flask' in tag.name or 'Flask' in tag.name %}
+        {% if 'flask' in tag or 'Flask' in tag %}
             <a href="{% url 'single_project' project.title %}">
                 <div class="card project-card mt-3">
                     <div class="img-box">
-                    <img src="{{project.picture.url}}" alt="">
+                    <img src="{{project.picture}}" alt="">
                     </div>
                     <div class="content">
                     <h3>{{project.title}}</h3>
@@ -251,9 +251,9 @@
                         </div>
                         </div>
 
-                        {% for tag in project.language.all %}
+                        {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                         {% endfor %}
 
@@ -278,14 +278,14 @@
         >
         
         {% for project in projects %}
-        {% for tag in project.language.all %}
+        {% for tag in project.language %}
            
             
-            {% if 'react' in tag.name or 'React' in tag.name %}
+            {% if 'react' in tag or 'React' in tag %}
                 <a href="{% url 'single_project' project.title %}">
                     <div class="card project-card mt-3">
                         <div class="img-box">
-                        <img src="{{project.picture.url}}" alt="">
+                        <img src="{{project.picture}}" alt="">
                         </div>
                         <div class="content">
                         <h3>{{project.title}}</h3>
@@ -299,9 +299,9 @@
                             </div>
                             </div>
 
-                            {% for tag in project.language.all %}
+                            {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                             {% endfor %}
                             
@@ -325,14 +325,14 @@
         >
         
         {% for project in projects %}
-        {% for tag in project.language.all %}
+        {% for tag in project.language %}
            
             
-            {% if 'Angular' in tag.name or 'angular' in tag.name %}
+            {% if 'Angular' in tag or 'angular' in tag %}
                 <a href="{% url 'single_project' project.title %}">
                     <div class="card project-card mt-3">
                         <div class="img-box">
-                        <img src="{{project.picture.url}}" alt="">
+                        <img src="{{project.picture}}" alt="">
                         </div>
                         <div class="content">
                         <h3>{{project.title}}</h3>
@@ -346,9 +346,9 @@
                             </div>
                             </div>
 
-                            {% for tag in project.language.all %}
+                            {% for tag in project.language %}
                             <ul>
-                                <li class="tags btn-info mt-1">{{tag.name}}</li>
+                                <li class="tags btn-info mt-1">{{tag}}</li>
                             </ul>
                             {% endfor %}
                             

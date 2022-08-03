@@ -13,15 +13,19 @@ def profile(request):
 
 def projects(request):
     title = "Projects"
-    projects = Code.objects.all()
-    images = Image.objects.filter(projects=projects)
-    return render(request, 'project.html', {'title': title, 'projects' : projects, 'images': images})
+    url = 'http://abzed-portfolio-api.herokuapp.com/projects'
+    res = requests.get(url)
+    projects = res.json()
+    # projects = Code.objects.all()
+    # images = Image.objects.filter(projects=projects)
+    return render(request, 'project.html', {'title': title, 'projects' : projects})
 
 def single_project(request, name):
+    url = 'http://abzed-portfolio-api.herokuapp.com/projects?q={{name}}'
+    res = requests.get(url)
+    projects = res.json()
     title = name
-    project = get_object_or_404(Code, title=name)
-    images = Image.objects.filter(projects=project)
-    return render(request, 'single_project.html', {'title': title, 'projects' : project, 'images': images})
+    return render(request, 'single_project.html', {'title': title, 'projects' : projects})
 
 def articles(request):
     title = "Articles"
